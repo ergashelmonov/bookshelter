@@ -15,7 +15,7 @@ const Bookmarks = ({ bookmarks, setBookmark }) => {
         return (
           <div
             key={index}
-            className="rounded w-[218px] min-h-[72px] bg-[#f8fafd] px-[10px] py-[15px] flex items-center justify-between mb-[15px]"
+            className="rounded w-full min-h-[72px] bg-[#f8fafd] px-[10px] py-[15px] flex items-center justify-between mb-[15px]"
           >
             <div>
               <h2 className="font-normal text-base text-[#000]">{item[1]}</h2>

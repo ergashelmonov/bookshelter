@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import Skleton from "../loader/Skleton";
 const Bookshelf = ({ data, bookmark, state, bookData }) => {
   return (
     <section className="p-10 flex flex-wrap gap-[33px]">
@@ -60,7 +60,7 @@ const Bookshelf = ({ data, bookmark, state, bookData }) => {
               </div>
             );
           })
-        : ""}
+        : <Skleton/>}
     </section>
   );
 };

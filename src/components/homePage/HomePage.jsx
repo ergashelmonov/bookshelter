@@ -26,7 +26,7 @@ const HomePage = () => {
   return (
     <>
       <Header search={setSearchItem} />
-      <div className="py-5 shadow-[0_0_2px_0_rgba(0, 0, 0, 0.15)] border-[1px] border-[#e3e6eb] border-solid pl-[306px] sticky top-[86px] bg-white z-10">
+      <div className="py-5 shadow-[0_0_2px_0_rgba(0, 0, 0, 0.15)] border-[1px] border-[#e3e6eb] border-solid text-center sticky top-[86px] bg-white z-10">
         {`Showing ${!!data ? data.items.length : ""} Result(s)`}
       </div>
       <main className="bg-[#f8fafd] flex">

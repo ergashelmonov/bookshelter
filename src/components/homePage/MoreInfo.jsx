@@ -17,6 +17,7 @@ const MoreInfo = ({ bookData, state }) => {
             {bookData.volumeInfo.title}
           </span>
           <Cross
+            className="cursor-pointer"
             onClick={() => {
               document.body.classList.remove("overflow-hidden"), state(false);
             }}
