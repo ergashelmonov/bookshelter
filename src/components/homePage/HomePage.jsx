@@ -26,10 +26,10 @@ const HomePage = () => {
   return (
     <>
       <Header search={setSearchItem} />
-      <div className="py-5 shadow-[0_0_2px_0_rgba(0, 0, 0, 0.15)] border-[1px] border-[#e3e6eb] border-solid text-center sticky top-[86px] bg-white z-10">
+      <div className="py-5 shadow-[0_0_2px_0_rgba(0, 0, 0, 0.15)] border-[1px] border-[#e3e6eb] border-solid text-center sticky top-[86px] bg-white z-10 max-[650px]:min-w-[540px]">
         {`Showing ${!!data ? data.items.length : ""} Result(s)`}
       </div>
-      <main className="bg-[#f8fafd] flex">
+      <main className="bg-[#f8fafd] flex max-[650px]:flex-col max-[650px]:min-w-[540px] m">
         <Bookmarks bookmarks={bookmark} setBookmark={setBookmark} />
         <Bookshelf
           data={data}
@@ -38,7 +38,9 @@ const HomePage = () => {
           bookData={setBookData}
         />
       </main>
-      {state && (document.body.classList.add('overflow-hidden'),<MoreInfo bookData={bookData} state={setState} />)}
+      {state &&
+        (document.body.classList.add("overflow-hidden"),
+        (<MoreInfo bookData={bookData} state={setState} />))}
     </>
   );
 };

@@ -4,7 +4,7 @@ import Book from "../../assets/svg/book.svg";
 
 const Bookmarks = ({ bookmarks, setBookmark }) => {
   return (
-    <aside className="min-w-[268px] w-full bg-white shadow-[0_3px_2px_0_rgba(0,0,0,0.1)] min-h-[300px] max-h-[830px] sticky left-0 top-[154px] p-[25px] overflow-auto">
+    <aside className="min-w-[268px] max-w-[350px] w-full bg-white shadow-[0_3px_2px_0_rgba(0,0,0,0.1)] min-h-[300px] duration-500 transition-all max-h-[830px] sticky left-0 top-[152px] p-[25px] overflow-auto max-[650px]:max-h-[40px] max-[650px]:min-h-[40px] max-[650px]:pt-[5px] hover:duration-500 max-[650px]:hover:max-h-full max-[650px]:min-w-[540px]">
       <div>
         <h1 className="font-normal text-2xl text-black">Bookmarks</h1>
         <p className="font-normal text-sm leading-[156%] mb-6">

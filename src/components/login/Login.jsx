@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [err, setErr] = useState("");
   const { register, handleSubmit } = useForm();
-  const navigate = useNavigate();
+  let navigate = useNavigate();
   const userData = {
     email: email,
     password: password,
@@ -29,8 +29,8 @@ const Login = () => {
     const data = await req.json();
     if (req.ok) {
       localStorage.setItem("token", data.token);
+      navigate("/");
       setErr("");
-      navigate("/home");
     } else {
       setErr(data.error);
     }
@@ -49,12 +49,14 @@ const Login = () => {
             type="email"
             className="bg-transparent bg-[url(../assets/svg/user.svg)] bg-no-repeat bg-[top_13px_left_12px] rounded border-[#fff] border-[1px] border-solid w-[300px] h-[45px] p-[13px_51px] text-white placeholder:text-white placeholder:uppercase font-light text-sm leading-[143%] outline-none"
             placeholder="Username"
+            value="eve.holt@reqres.in"
             {...register("email")}
           />
           <input
-            type="text"
+            type="password"
             className="bg-transparent bg-[url(../assets/svg/password.svg)] bg-no-repeat bg-[top_13px_left_12px]  rounded border-[#fff] border-[1px] border-solid w-[300px] h-[45px] p-[13px_51px] text-white   placeholder:text-white placeholder:uppercase font-light text-sm leading-[143%] outline-none"
             placeholder="password"
+            value="cityicka"
             {...register("password")}
           />
         </div>

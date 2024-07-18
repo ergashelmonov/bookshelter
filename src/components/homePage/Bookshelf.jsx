@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Skleton from "../loader/Skleton";
 const Bookshelf = ({ data, bookmark, state, bookData }) => {
   return (
-    <section className="p-10 flex flex-wrap gap-[33px]">
+    <section className="p-10 flex flex-wrap gap-[33px] justify-center">
       {!!data
         ? data.items.map((item, index) => {
             return (
