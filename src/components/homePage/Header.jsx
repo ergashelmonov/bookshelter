@@ -19,7 +19,6 @@ const Header = ({ search }) => {
       <form
         onSubmit={handleSubmit((data) => {
           search(data.search);
-          console.log(data);
         })}
         className="bg-[#f8fafd] bg-[url(../assets/svg/search.svg)] bg-no-repeat bg-[top_20px_left_16px] shadow-[0_0_3px_0_rgba(0, 0, 0, 0.1)] w-[670px] rounded-[30px] py-[17px] pl-[48px] flex-grow mr-[49px]]"
       >

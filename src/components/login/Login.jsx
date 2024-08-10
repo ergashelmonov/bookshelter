@@ -34,7 +34,6 @@ const Login = () => {
     } else {
       setErr(data.error);
     }
-    console.log(data);
   };
   return (
     <div className="w-full h-screen bg-[url(../assets/login.jpg)] bg-no-repeat bg-cover flex items-center justify-center">
